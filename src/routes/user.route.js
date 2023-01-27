@@ -16,7 +16,7 @@ app.post("/signup", async (req, res) => {
   let user = await createUser({ name, score, difficulty });
 
   if (user) {
-    return res.send({ status: true, messege: "user created successfully" });
+    return res.send({ status: true, messege: "user created successfully", user});
   } else {
     return res.send({ status: false, messege: "wrong details" });
   }
