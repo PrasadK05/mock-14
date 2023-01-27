@@ -6,7 +6,7 @@ const createUser = async (data) => {
   let { name, score, difficulty } = data;  
   let user = await User.create({ name, score, difficulty });
   if (user) {
-    return true;
+    return user;
   } else {
     return false;
   }
