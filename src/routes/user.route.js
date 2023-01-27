@@ -1,16 +1,12 @@
 require("dotenv").config();
 const express = require("express");
-const jwt = require("jsonwebtoken");
 const {
-  createUser,
-  validateUser,
-  findUser,
+  createUser, 
 } = require("../controllers/user.controllers");
 const User = require("../models/user.model");
 const otpGenerator = require("otp-generator");
 
-const token_secret = process.env.TOKEN_KEY;
-const refreshToken_secret = process.env.REFRESHTOKEN_KEY;
+
 
 const app = express.Router();
 
